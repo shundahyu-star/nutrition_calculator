@@ -60,3 +60,22 @@ ingr_dg = {
     "honey": {"cal": 304, "p": 0.3, "f": 0, "c": 82},
     "maple_syrup": {"cal": 260, "p": 0, "f": 0, "c": 67}
     }
+
+recipies_db = [
+    #breakfasts
+    {"name": "Oatmeal & Berries", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"oats": 60, "almond_milk": 150, "berries": 100, "chia_seeds": 10}},
+    {"name": "Protein Scramble", "time": "breakfast", "diets": ["vegetarian", "vegan", "standard"], "base": {"eggs": 100, "egg_whites": 100, "spinach": 50, "whole_wheat_bread": 70, "butter": 5}},
+    {"name": "Tofu Scramble Hash", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"tofu_firm": 150, "potato": 100, "onion": 30, "olive_oil": 10}},
+    {"name": "Greek Yogurt Parfait", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"greek_yogurt": 200, "honey": 15, "almonds": 20, "berries": 50}},
+    {"name": "Peanut Butter Banana Toast", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"whole_wheat_bread": 70, "peanut_butter": 30, "banana": 100}},
+    {"name": "Smoked Samon Bagel Bowl", "time": "breakfast", "diets": ["standard"], "base": {"salmon": 80, "whole_wheat_bread": 70, "cottage_cheese": 50, "tomato": 40}},
+    {"name": "Cottage Cheese & Apple", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"cottage_cheese": 150, "apple": 120, "walnuts": 15}},
+    {"name": "Steak & Eggs", "time": "breakfast", "diets": ["standard"], "base": {"lean_beef": 100, "eggs": 100, "potato": 100, "olive_oil": 5}},
+    {"name": "Vegan Protein Shake", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"almond_milk": 250, "peanut_butter": 40, "banana": 100, "oats": 30}},
+    {"name": "Avocado Toat with Egg", "time": "breakfast", "diets": ["vegetariain", "standard"], "base": {"whole_wheat_bread": 70, "avocado": 60, "egges": 50, "spinach": 30}},
+#LUNCHES (Yum yum)
+    {"name": "Chicken Teriyaki bowl", "time": "lunch", "diets": ["standard"], "base": {"chicken_breast": 150, "white_rice": 100, "brocoli": 80, "garlic": 5}},
+    {"name": "Lentil Salad", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"lentils": 150, "spinach": 50, "tomato": 50, "olive_oil": 10, "onion": 20}},
+    {"name": "Tuna Salad Sandwich", "time": "lunch", "diets": ["standard"], "base": {"tuna_canned": 120, "greek_yogurt": 40, "whole_wheat_bread": 70, "carrot": 30}},
+    {"name": "Tempeh Stir-fry", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"tempeh": 120, "brown_rice": 100, "bell_pepper": 50, "zucchini": 50, "olive_oil": 10}},
+]
