@@ -88,4 +88,11 @@ recipes_db = [
     {"name": "Lean Steak & Sweet Potato", "time": "dinner", "diets": ["standard"], "base": {"lean_beef": 180, "sweet_potato": 150, "broccoli": 100, "butter": 10}},
     {"name": "Tofu Curry", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"tofu_firm": 150, "whole_milk": 50, "cauliflower": 100, "white_rice": 100}},
     {"name": "Baked Salmon & Asparagus", "time": "dinner", "diets": ["standard"], "base": {"salmon": 180, "quinoa": 80, "zucchini": 100, "olive_oil": 10}},
+    {"name": "Pork Loin & Mash", "time": "dinner", "diets": ["standard"], "base": {"pork_loin": 160, "potato": 200, "whole_milk": 30, "kale": 80}},
+    {"name": "Vegan Black Bean Burger", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"black_beans": 120, "oats": 30, "whole_wheat_bread": 70, "avocado": 30, "tomato": 30}},
+    {"name": "Shrimp Pasta Garlic Oil", "time": "dinner", "diets": ["standard"], "base": {"shrimp": 150, "pasta": 100, "olive_oil": 15, "garlic": 10, "spinach": 50}},
+    {"name": "Lentil Shepherd's Pie", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"lentils": 120, "potato": 150, "carrot": 50, "onion": 30, "olive_oil": 10}},
+    {"name": "Chicken & Veggie Roast", "time": "dinner", "diets": ["standard"], "base": {"chicken_breast": 180, "carrot": 80, "potato": 100, "olive_oil": 10}},
+    {"name": "Tempeh Bolognese", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"tempeh": 120, "pasta": 100, "tomato": 100, "onion": 30, "garlic": 5}},
+    {"name": "Turkey Meatball Zoodles", "time": "dinner", "diets": ["standard"], "base": {"turkey_breast": 150, "zucchini": 200, "tomato": 100, "olive_oil": 10}},
 ]
