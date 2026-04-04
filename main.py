@@ -74,15 +74,18 @@ recipes_db = [
     {"name": "Vegan Protein Shake", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"almond_milk": 250, "peanut_butter": 40, "banana": 100, "oats": 30}},
     {"name": "Avocado Toat with Egg", "time": "breakfast", "diets": ["vegetariain", "standard"], "base": {"whole_wheat_bread": 70, "avocado": 60, "egges": 50, "spinach": 30}},
 #LUNCHES
-    {"name": "Chicken Teriyaki bowl", "time": "lunch", "diets": ["standard"], "base": {"chicken_breast": 150, "white_rice": 100, "brocoli": 80, "garlic": 5}},
+    {"name": "Chicken Teriyaki Bowl", "time": "lunch", "diets": ["standard"], "base": {"chicken_breast": 150, "white_rice": 100, "broccoli": 80, "garlic": 5}},
     {"name": "Lentil Salad", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"lentils": 150, "spinach": 50, "tomato": 50, "olive_oil": 10, "onion": 20}},
     {"name": "Tuna Salad Sandwich", "time": "lunch", "diets": ["standard"], "base": {"tuna_canned": 120, "greek_yogurt": 40, "whole_wheat_bread": 70, "carrot": 30}},
     {"name": "Tempeh Stir-fry", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"tempeh": 120, "brown_rice": 100, "bell_pepper": 50, "zucchini": 50, "olive_oil": 10}},
     {"name": "Beef & Potato Hash", "time": "lunch", "diets": ["standard"], "base": {"lean_beef": 150, "sweet_potato": 150, "onion": 40, "olive_oil": 5}},
     {"name": "Chickpea Smash Wrap", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"chickpeas": 130, "avocado": 40, "whole_wheat_bread": 70, "spinach": 30}},
-    {"name": "Turkey & Cheese Roll Ups", "time": "lunch", "diets": ["standard"], "base": {"turkey_breast": 120, "cottage_cheese": 50, "whole_wheat_bread": 70, "tomato": 40 }},
+    {"name": "Turkey & Cheese Roll-ups", "time": "lunch", "diets": ["standard"], "base": {"turkey_breast": 120, "cottage_cheese": 50, "whole_wheat_bread": 70, "tomato": 40}},
+    {"name": "Quinoa & Black Bean Bowl", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"quinoa": 100, "black_beans": 100, "avocado": 40, "bell_pepper": 40}},
     {"name": "Salmon & Veggie Pasta", "time": "lunch", "diets": ["standard"], "base": {"salmon": 120, "pasta": 80, "zucchini": 50, "olive_oil": 10}},
     {"name": "Seitan Power Bowl", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"seitan": 100, "brown_rice": 100, "kale": 50, "olive_oil": 10}},
     #dinner
-    
+    {"name": "Lean Steak & Sweet Potato", "time": "dinner", "diets": ["standard"], "base": {"lean_beef": 180, "sweet_potato": 150, "broccoli": 100, "butter": 10}},
+    {"name": "Tofu Curry", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"tofu_firm": 150, "whole_milk": 50, "cauliflower": 100, "white_rice": 100}},
+    {"name": "Baked Salmon & Asparagus", "time": "dinner", "diets": ["standard"], "base": {"salmon": 180, "quinoa": 80, "zucchini": 100, "olive_oil": 10}},
 ]
