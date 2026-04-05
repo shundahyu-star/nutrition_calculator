@@ -2,7 +2,7 @@ import random
 import os
 # DATABASE 1: 50 ingrdients
 # Values are per 100g (cal, pro, fat, car)
-ingr_dg = {
+ingr_db = {
     #protein sources (MEAT)
     "chicken_breast": {"cal": 165, "p": 31, "f": 3.6,"c": 0},
     "turkey_breast": {"cal": 135, "p": 30, "f": 1.0, "c": 0},
