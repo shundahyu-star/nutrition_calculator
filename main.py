@@ -164,3 +164,64 @@ def main():
     gender = input("Gender (m/f): ").lower()
     weight = float(input("Weight (kg): "))
     height = float(input("Height (cm): "))
+    
+    print("\nActivity Levels:")
+    print("1: Sedentary (office job, little exercise)")
+    print("2: Lightly Active (1-3 days/week)")
+    print("3: Moderately Active (3-5 days/week)")
+    print("4: Very Active (6-7 days/week)")
+    act_choice = input("Select Activity Level (1-4): ")
+    activity_map = {'1': 1.2, '2': 1.375, '3': 1.55, '4': 1.725}
+    activity = activity_map.get(act_choice, 1.2)
+    
+    print("\nGoals:")
+    print("1: Cut (Lose Fat)")
+    print("2: Maintain")
+    print("3: Bulk (Gain Muscle)")
+    goal_choice = input("Select Goal (1-3): ")
+    goal_map = {'1': 'cut', '2': 'maintain', '3': 'bulk'}
+    goal = goal_map.get(goal_choice, 'maintain')
+    
+    print("\nDietary Restrictions:")
+    print("1: Standard (No restrictions)")
+    print("2: Vegetarian")
+    print("3: Vegan")
+    diet_choice = input("Select Diet (1-3): ")
+    diet_map = {'1': 'standard', '2': 'vegetarian', '3': 'vegan'}
+    diet = diet_map.get(diet_choice, 'standard')
+    
+    # Crunch the numbers once
+    t_cals, t_p, t_f, t_c = calculate_needs(age, gender, weight, height, activity, goal)
+    
+    # Meal Generation Loop
+    while True:
+        clear_screen()
+        print("=========================================")
+        print("           YOUR DAILY TARGETS            ")
+        print("=========================================")
+        print(f"Goal: {goal.upper()} | Diet: {diet.upper()}")
+        print(f"Calories: {t_cals:.0f} kcal")
+        print(f"Macros: Protein {t_p:.0f}g | Fat {t_f:.0f}g | Carbs {t_c:.0f}g")
+        print("=========================================\n")
+        
+        plan = generate_meal_plan(t_cals, diet)
+        
+        meal_labels = ["BREAKFAST", "LUNCH", "DINNER"]
+        for i, meal in enumerate(plan):
+            print(f"[{meal_labels[i]}] - {meal['name']}")
+            print(f"Macros: {meal['cals']} kcal | P: {meal['p']}g | F: {meal['f']}g | C: {meal['c']}g")
+            print("Ingredients needed:")
+            for ingr, amount in meal['ingredients'].items():
+                clean_name = ingr.replace("_", " ").title()
+                print(f"  - {amount}g of {clean_name}")
+            print("-" * 41)
+            
+        print("\nOptions:")
+        choice = input("Press [Enter] to exit, or type 'R' to generate different meals: ").lower()
+        
+        if choice != 'r':
+            print("\nEnjoy your meals! Exiting...")
+            break
+
+if __name__ == "__main__":
+    main()
