@@ -96,3 +96,71 @@ recipes_db = [
     {"name": "Tempeh Bolognese", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"tempeh": 120, "pasta": 100, "tomato": 100, "onion": 30, "garlic": 5}},
     {"name": "Turkey Meatball Zoodles", "time": "dinner", "diets": ["standard"], "base": {"turkey_breast": 150, "zucchini": 200, "tomato": 100, "olive_oil": 10}}
 ]
+
+# logic and algorithms.
+def calculate_needs(age, gender, weight, height, activity, goal):
+    #bmr calculation
+    if gender == 'm':
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
+    else:
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
+    #tdee calculation
+    tdee = bmr * activity
+    #goal rrequirements
+    if goal == 'cut': target_cals = tdee * 0.80
+    elif goal == 'bulk': target_cals = tdee * 1.20
+    else: target_cals = tdee
+    #macro split calc
+    target_p = weight * 2.2
+    target_f = (target_cals * 0.25)/ 9
+    target_c = (target_cals - (target_p* 4) - (target_f * 9))/4
+    return target_cals, target_p, target_f, target_c
+def calculate_recipe_base_macros(recipe):
+    base_cals = base_p = base_f = base_c = 0
+    for ingr, amount in recipe["base"].items():
+        ratio = amount / 100
+        base_cals += ingr_db[ingr]["cal"] * ratio
+        base_p += ingr_db[ingr]["p"] * ratio
+        base_f += ingr_db[ingr]["f"] * ratio
+        base_c += ingr_db[ingr]["c"] * ratio
+    return base_cals, base_p, base_f, base_c
+def generate_meal_plan(target_cals, diet_pref):
+    # Filter
+    valid_breakfasts = [r for r in recipes_db if r["time"] == "breakfast" and diet_pref in r["diets"]]
+    valid_lunches = [r for r in recipes_db if r["time"] == "lunch" and diet_pref in r["diets"]]
+    valid_dinners = [r for r in recipes_db if r["time"] == "dinner" and diet_pref in r["diets"]]
+    meal_target_cals = target_cals / 3
+
+    daily_plan = []
+    for meal_pool in [valid_breakfasts, valid_lunches, valid_dinners]:
+        selected_recipe = random.choice(meal_pool)
+        base_cals, base_p, base_f, base_c = calculate_recipe_base_macros(selected_recipe)
+        scale_factor = meal_target_cals / base_cals if base_cals > 0 else 1
+        scaled_ingredients = {}
+        for ingr, base_amount in selected_recipe["base"].items():
+            scaled_ingredients[ingr] = round(base_amount * scale_factor)
+
+        daily_plan.append({
+            "name": selected_recipe["name"],
+            "cals": round(base_cals * scale_factor),
+            "p": round(base_p * scale_factor),
+            "f": round(base_f * scale_factor),
+            "c": round(base_c * scale_factor),
+            "ingredients": scaled_ingredients
+        })
+    return daily_plan
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def main():
+    clear_screen()
+    print("=========================================")
+    print("      MACRO & MEAL PLAN GENERATOR        ")
+    print("=========================================\n")
+    
+    #user data
+    age = int(input("Age: "))
+    gender = input("Gender (m/f): ").lower()
+    weight = float(input("Weight (kg): "))
+    height = float(input("Height (cm): "))
