@@ -64,15 +64,15 @@ ingr_dg = {
 recipes_db = [
     #breakfasts
     {"name": "Oatmeal & Berries", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"oats": 60, "almond_milk": 150, "berries": 100, "chia_seeds": 10}},
-    {"name": "Protein Scramble", "time": "breakfast", "diets": ["vegetarian", "vegan", "standard"], "base": {"eggs": 100, "egg_whites": 100, "spinach": 50, "whole_wheat_bread": 70, "butter": 5}},
+    {"name": "Protein Scramble", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"eggs": 100, "egg_whites": 100, "spinach": 50, "whole_wheat_bread": 70, "butter": 5}},
     {"name": "Tofu Scramble Hash", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"tofu_firm": 150, "potato": 100, "onion": 30, "olive_oil": 10}},
     {"name": "Greek Yogurt Parfait", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"greek_yogurt": 200, "honey": 15, "almonds": 20, "berries": 50}},
     {"name": "Peanut Butter Banana Toast", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"whole_wheat_bread": 70, "peanut_butter": 30, "banana": 100}},
-    {"name": "Smoked Samon Bagel Bowl", "time": "breakfast", "diets": ["standard"], "base": {"salmon": 80, "whole_wheat_bread": 70, "cottage_cheese": 50, "tomato": 40}},
+    {"name": "Smoked Salmon Bagel Bowl", "time": "breakfast", "diets": ["standard"], "base": {"salmon": 80, "whole_wheat_bread": 70, "cottage_cheese": 50, "tomato": 40}},
     {"name": "Cottage Cheese & Apple", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"cottage_cheese": 150, "apple": 120, "walnuts": 15}},
     {"name": "Steak & Eggs", "time": "breakfast", "diets": ["standard"], "base": {"lean_beef": 100, "eggs": 100, "potato": 100, "olive_oil": 5}},
     {"name": "Vegan Protein Shake", "time": "breakfast", "diets": ["vegan", "vegetarian", "standard"], "base": {"almond_milk": 250, "peanut_butter": 40, "banana": 100, "oats": 30}},
-    {"name": "Avocado Toat with Egg", "time": "breakfast", "diets": ["vegetariain", "standard"], "base": {"whole_wheat_bread": 70, "avocado": 60, "egges": 50, "spinach": 30}},
+    {"name": "Avocado Toast with Egg", "time": "breakfast", "diets": ["vegetarian", "standard"], "base": {"whole_wheat_bread": 70, "avocado": 60, "eggs": 50, "spinach": 30}},
 #LUNCHES
     {"name": "Chicken Teriyaki Bowl", "time": "lunch", "diets": ["standard"], "base": {"chicken_breast": 150, "white_rice": 100, "broccoli": 80, "garlic": 5}},
     {"name": "Lentil Salad", "time": "lunch", "diets": ["vegan", "vegetarian", "standard"], "base": {"lentils": 150, "spinach": 50, "tomato": 50, "olive_oil": 10, "onion": 20}},
@@ -94,5 +94,5 @@ recipes_db = [
     {"name": "Lentil Shepherd's Pie", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"lentils": 120, "potato": 150, "carrot": 50, "onion": 30, "olive_oil": 10}},
     {"name": "Chicken & Veggie Roast", "time": "dinner", "diets": ["standard"], "base": {"chicken_breast": 180, "carrot": 80, "potato": 100, "olive_oil": 10}},
     {"name": "Tempeh Bolognese", "time": "dinner", "diets": ["vegan", "vegetarian", "standard"], "base": {"tempeh": 120, "pasta": 100, "tomato": 100, "onion": 30, "garlic": 5}},
-    {"name": "Turkey Meatball Zoodles", "time": "dinner", "diets": ["standard"], "base": {"turkey_breast": 150, "zucchini": 200, "tomato": 100, "olive_oil": 10}},
+    {"name": "Turkey Meatball Zoodles", "time": "dinner", "diets": ["standard"], "base": {"turkey_breast": 150, "zucchini": 200, "tomato": 100, "olive_oil": 10}}
 ]
